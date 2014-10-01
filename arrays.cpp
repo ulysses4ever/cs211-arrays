@@ -4,7 +4,7 @@
 // task 1
 void task_1()
 {
-    int n = 10;
+    const int n = 10;
     int a[n];
 }
 
