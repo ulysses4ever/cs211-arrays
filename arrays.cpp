@@ -4,7 +4,7 @@
 // task 1
 void task_1()
 {
-    const int n = 10;
+    int n = 10;
     int a[n];
 }
 
@@ -12,9 +12,7 @@ void task_1()
 void task_2()
 {
     int a[5] = {0};
-
-    //assert(!a[4]) or assert(a[4]) -- place here one of these and
-    //                                 explain your choice in commit msg
+    assert(!a[4]);
 }
 
 // returns zero
