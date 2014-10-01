@@ -1,9 +1,6 @@
 #include <iostream>
 #include <cassert>
 
-#if 0
-// NOTE: you should move this `if` down as you start solving each task
-
 void task_1()
 {
     /* Task 1: find a bug in the following declaration.
@@ -78,5 +75,3 @@ void task_7_print(int * arr, int size, char delim = ' ')
         std::cout << a[i] << delim;
     }
 }
-
-#endif
