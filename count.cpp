@@ -12,6 +12,25 @@ using namespace std;
  *
  */
 
+ void drawHist(const int * arr, int size) {
+    // 0 1 2 3 4 5 6 7 8 9
+    for (int i = 0; i < size; i++)
+        cout << i << ' ';
+    cout << endl;
+
+    // num of rows
+    int max = 0;
+    for (int i = 0; i < size; i++)
+        if (arr[i] > max)
+            max = arr[i];
+
+    for (int row = 0; row < max; row++) {
+        for (int i = 0; i < size; i++)
+            cout << (arr[i] > row ? "* " : "  ");
+        cout << '\n';
+    }
+ }
+
 int main()
 {
 	string src("12 plus 45 minus 39 is 18\n");
@@ -34,5 +53,7 @@ int main()
 		cout << " " << ndigit[i];
 
 	cout << ", white space = " << nwhite
-		 << ", other = " << nother << endl;
+		 << ", other = " << nother << '\n' << endl;
+
+    drawHist(ndigit, size);
 }
