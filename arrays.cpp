@@ -52,11 +52,8 @@ void task_5_copy(int * arr1, int * arr2, int size)
 // copy array `arr1` to array `arr2` of the same size
 void task_6_poor_copy(int * arr1, int * arr2)
 {
-    // Hint: something wrong here; test this from main()
-    for(int i = 0; i < sizeof(arr2); ++i)
-    {
+    for(int i = 0; i < sizeof(arr2) / sizeof(int); ++i)
         arr2[i] = arr1[i];
-    }
 }
 
 // Task 7
