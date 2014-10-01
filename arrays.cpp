@@ -66,3 +66,23 @@ void task_7_print(int * arr, int size, char delim = ' ')
         std::cout << arr[i] << delim;
     }
 }
+
+int main() {
+    task_1();
+    task_2();
+    assert(task_3_zero() == 0);
+    task_4();
+
+    const int n = 5;
+    int a[n] = {1, 2, 3, 4, 5};
+    int b[n] = {0};
+    task_5_copy(b, a, n);
+    for (int i = 0; i < n; i++)
+        assert(a[i] == 0);
+
+    b[0] = 1;
+    task_6_poor_copy(a, b);
+    assert(b[0] == 0);
+
+    task_7_print(a, n);
+}
