@@ -50,9 +50,9 @@ void task_5_copy(int * arr1, int * arr2, int size)
 
 // Task 6
 // copy array `arr1` to array `arr2` of the same size
-void task_6_poor_copy(int * arr1, int * arr2)
+void task_6_poor_copy(int * & arr1, int * & arr2)
 {
-    arr2 = arr1;
+    *arr2 = *arr1;
 }
 
 // Task 7
@@ -78,11 +78,5 @@ int main() {
     task_5_copy(b, a, n);
     for (int i = 0; i < n; i++)
         assert(a[i] == 0);
-
-    int c[n] = {1, 2, 3, 4, 5};
-    task_6_poor_copy(c, b);
-    assert(b[0] == 1);
-    assert(b[4] == 5);
-
     task_7_print(a, n);
 }
