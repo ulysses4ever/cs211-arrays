@@ -37,5 +37,23 @@ int main()
 	cout << ", white space = " << nwhite 
 		 << ", other = " << nother << endl;
 
+	// создаём гистограмму
+	cout << endl << "white space: ";
+	for (int j = 0; j < nwhite; j++)
+		cout << "=";
+	cout << endl;
+
+	cout << "others:      ";
+	for (int j = 0; j < nother; j++)
+		cout << "=";
+	cout << endl;
+
+	for (int i = 0; i < size; i++)
+	{
+		cout << i << ":           ";
+		for (int j = 0; j < ndigit[i]; j++)
+			cout << "=";
+		cout << endl;
+	}
 	system("pause");
 }
