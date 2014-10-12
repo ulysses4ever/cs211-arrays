@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cassert>
+#include "arrays.h"
 
 
 // NOTE: you should move this `if` down as you start solving each task
@@ -58,7 +59,7 @@ void task_6_poor_copy(const int * arr1, int * arr2, int size)
 
 // Task 7
 // print array `arr`
-void task_7_print(const int * arr, int size, char delim = ' ')
+void task_7_print(const int * arr, int size, char delim)
 {
 	for (int i = 0; i < size; i++)
 	{
