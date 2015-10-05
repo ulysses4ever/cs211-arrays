@@ -1,8 +1,7 @@
 #include <iostream>
 #include <cassert>
 
-
-// NOTE: you should move this `if` down as you start solving each task
+using namespace std;
 
 void task_1()
 {
@@ -12,7 +11,7 @@ void task_1()
      * pedantic flag here means: strictly as in language standard 
      * for explanation see:
      *  https://gcc.gnu.org/onlinedocs/gcc/Variable-Length.html*/
-    int n = 10;
+    const int n = 10;
     int a[n];
 }
 
@@ -68,6 +67,7 @@ void task_6_poor_copy(int * arr1, int * arr2)
     }
 }
 
+/*
 // Task 7
 // print array `arr`
 void task_7_print(int * arr, int size, char delim = ' ')
@@ -78,5 +78,7 @@ void task_7_print(int * arr, int size, char delim = ' ')
         std::cout << a[i] << delim;
     }
 }
+*/
+
 
 
