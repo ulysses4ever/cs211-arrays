@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cassert>
 
-#if 0
+
 // NOTE: you should move this `if` down as you start solving each task
 
 void task_1()
@@ -79,4 +79,4 @@ void task_7_print(int * arr, int size, char delim = ' ')
     }
 }
 
-#endif
+
