@@ -41,17 +41,16 @@ void println(int *a, int n)
 int main()
 {
 	const int m = 9;
-	int a[m]{666, 1, 3, 2, 5, 4, 0,-666,99};
+	int a[m]{666, 1, 3, 2, 5, 4, 0, -666, 99};
 	println(a, m);
 	my_qsort(a, m);
 	println(a, m);
 	cout << "\n";
 
-	//int b[]{1,2,2,2,2,-666,6,7,8,46,4,3,2,22,999,0,-5};
 	const int n = 5;
-	int b[n]{1,666,-666,0,2};
+	int b[n]{1, 666, -666, 0, 2};
 	println(b, n);
-	my_qsort(b,n);
+	my_qsort(b, n);
 	println(b, n);
 	cout << "\n";
 
