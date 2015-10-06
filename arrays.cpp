@@ -19,9 +19,9 @@ void task_1()
 void task_2()
 {
     int a[5] = {0};
-    
-    //assert(!a[4]) or assert(a[4]) -- place here one of these and
-    //                                 explain your choice in commit msg
+	assert(!a[4]);
+	//place here one of these and
+    //explain your choice in commit msg
 }
 
 // returns zero
