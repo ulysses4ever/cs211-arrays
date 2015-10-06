@@ -4,14 +4,6 @@
 
 using namespace std;
 
-/* count digits, white space, others */
-
-/* TODO: (1) fix all errors; 
- *       (2) add code for painting histogram in console,
- *           cf. picture in https://en.wikipedia.org/wiki/Histogram
- * 
- */
-
 int main()
 {
 	string src("12 plus 45 minus 39 is 18\n");
@@ -34,13 +26,21 @@ int main()
 			++nother;
 	}
 	
-	
 	cout << "source string: " << src << endl << "digits =";
 	for (int i = 0; i < size; ++i)
 		cout << " " << ndigit[i];
 	
 	cout << ", white space = " << nwhite 
-		 << ", other = " << nother << endl;
+		 << ", other = " << nother << endl << endl;
+
+	cout << "table:\n";
+	for (int i = 0; i < size; i++)
+	{
+		cout << "symbol " << i << " contains " << ndigit[i] << " times\n";
+	}
+
+	cout << "white space" << " contains " << nwhite << " times\n";
+	cout << "others" << " contains " << nother << " times\n";
 
 	system("pause");
 }
