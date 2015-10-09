@@ -14,8 +14,9 @@ int * partition(int * left, int *  right, int * pivot) {
 	int * store = left; // место для вставки элементов, меньших pivot
 	swap(*pivot, *right); // меняем местами опорный и крайний правый элементы
 	for (int * p = left; p != right; ++p)
-		if (*p < pivot)
+		if (*p < *pivot)
 			swap(*p, *store++);
+	swap(*store, *right);
 	return store;
 }
  
