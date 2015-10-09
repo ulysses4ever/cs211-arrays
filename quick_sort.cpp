@@ -12,9 +12,10 @@ using std::swap;
 // возвращает место начала блока элементов, больших pivot;
 int * partition(int * left, int *  right, int * pivot) {
 	int * store = left; // место для вставки элементов, меньших pivot
+	int val = *pivot; // сохранение значения
 	swap(*pivot, *right); // меняем местами опорный и крайний правый элементы
 	for (int * p = left; p != right; ++p)
-		if (*p < *pivot)
+		if (*p < val)
 			swap(*p, *store++);
 	swap(*store, *right);
 	return store;
@@ -26,5 +27,5 @@ void my_qsort(int * arr, int n) {
 	int * pivotPtr = arr + rand() % n; // случайный выбор опорного элемента
 	int newPivotIdx = partition(arr, arr + n - 1, pivotPtr) - arr;
 	my_qsort(arr, newPivotIdx);
-	my_qsort(arr + newPivotIdx, n - (newPivotIdx + 1));
+	my_qsort(arr + newPivotIdx + 1, n - (newPivotIdx + 1));
 }
