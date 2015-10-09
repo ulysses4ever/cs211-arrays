@@ -1,6 +1,6 @@
 #include <iostream>
- 
 #include <cstdlib>
+#include "quick_sort.h"
  
 using std::rand;
 using std::swap;
@@ -10,7 +10,7 @@ using std::swap;
 // заданной отрезком [left, right), так что в начале
 // следуют элементы меньшие pivot, а в конце - большие;
 // возвращает место начала блока элементов, больших pivot;
-int * partition(int * left, int *  right, int pivot) {
+int * partition(int * left, int *  right, int * pivot) {
 	int * store = left; // место для вставки элементов, меньших pivot
 	for (int * p = left; p != right; ++p)
 		if (*p < pivot)
